@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aagam Kasliwal - Creative Developer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <style>
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .mega-text {
+            font-size: clamp(3rem, 15vw, 12rem);
+            line-height: 0.9;
+        }
+
+        .reveal-text {
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        .reveal-text.visible {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .project-card {
+            transition: transform 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #3B82F6, #60A5FA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .scroll-text {
+            animation: scroll 20s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Add main container padding */
+        .main-container {
+            padding: 0 2rem;
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: black;
+            font-size: 1rem;
+        }
+
+        .social-icon {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-icon img {
+            width: 50px;
+            height: 50px;
+        }
+
+        @media (min-width: 768px) {
+            .main-container {
+                padding: 0 4rem;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .main-container {
+                padding: 0 6rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white" style="background-color: #4CAF50;">
+    <div class="main-container">
+        <!-- Navigation -->
+        <nav class="fixed w-full z-50 left-0 right-0">
+            <div class="max-w-7xl mx-auto px-6 py-4 bg-black bg-opacity-50 backdrop-blur-lg">
+                <div class="flex justify-between items-center">
+                    <!-- <a href="#" class="text-2xl font-bold gradient-text">AK.</a> -->
+                    <style>
+                        /* Style for the colored strip */
+                        .color-strip {
+                          background-color: #4CAF50; /* Change to your desired color */
+                          padding: 10px 20px; /* Adjust padding for height and spacing */
+                          display: flex; /* For horizontal layout of links */
+                          justify-content: center; /* Center the links */
+                          align-items: center; /* Vertically align the links */
+                        }
+                        
+                        /* Style for the links */
+                        .color-strip a {
+                          color: white; /* Link text color */
+                          text-decoration: none; /* Remove underline */
+                          margin: 0 15px; /* Space between links */
+                          font-size: 18px; /* Font size for links */
+                        }
+                    
+                        /* Add hover effect */
+                        .color-strip a:hover {
+                          text-decoration: underline; /* Add underline on hover */
+                        }
+                      </style>
+                    </head>
+                    <body>
+                    
+                      <!-- Color strip with links -->
+                      <div class="color-strip">
+                        <a href="index.html" class="hover:text-blue-400 transition-colors"style="margin-right: 50px;">About</a>
+                        <a href="Work.html" class="hover:text-blue-400 transition-colors"style="margin-right: 50px;">Work</a>
+                        <a href="Contact.html" class="hover:text-blue-400 transition-colors"style="margin-right: 50x;">Contact</a>
+                      </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+            <div class="absolute inset-0 grid grid-cols-8 grid-rows-8 gap-4 opacity-10">
+                <div class="col-span-2 row-span-2 bg-blue-500 rounded-full blur-3xl floating"></div>
+                <div class="col-start-6 col-span-2 row-start-3 row-span-2 bg-purple-500 rounded-full blur-3xl floating">
+                </div>
+                <div class="col-start-3 col-span-2 row-start-6 row-span-2 bg-pink-500 rounded-full blur-3xl floating">
+                </div>
+            </div>
+            <!-- <div class="max-w-7xl mx-auto px-6 text-center" style=" width: 500px; height: 650px;background-image: url('/api/placeholder/800/Self.jpg');"> -->
+                <h1 class="mega-text font-bold mb-8">CONTACT</h1>
+                <p class="text-xl md:text-2xl mb-12 text-gray-400"></p>
+                <div class="flex justify-center space-x-6">
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <center>
+            <div class="max-w-7xl mx-auto px-6">
+                <h2 class="text-4xl md:text-6xl font-bold mb-16" style="background-color: #81C784;">Let's Work Together<br>You Can Contact Me At :</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/aagamkasliwal/" target="_blank" class="social-link">
+                            <div class="social-icon">
+                                <img src="/api/placeholder/800/linkedin.png" alt="LinkedIn">
+                            </div>
+                            <span class="dot">•</span> LinkedIn
+                        </a>
+                        <a href="https://github.com/AagamK" target="_blank" class="social-link">
+                            <div class="social-icon">
+                                <img src="/api/placeholder/800/github.png" alt="GitHub">
+                            </div>
+                            <span class="dot">•</span> GitHub
+                        </a>
+                        <a href="https://www.instagram.com/aagamkasliwal/" target="_blank" class="social-link">
+                            <div class="social-icon">
+                                <img src="/api/placeholder/800/instagram.png" alt="Instagram">
+                            </div>
+                            <span class="dot">•</span> Instagram
+                        </a>
+                        <a href="https://x.com/KasliwalAagam1" target="_blank" class="social-link">
+                            <div class="social-icon">
+                                <img src="/api/placeholder/800/x.png" alt="X">
+                            </div>
+                            <span class="dot">•</span> X
+                        </a>
+                        <a href="https://www.facebook.com/aagam.kasliwal" target="_blank" class="social-link">
+                            <div class="social-icon">
+                                <img src="/api/placeholder/800/facebook.png" alt="Facebook">
+                            </div>
+                            <span class="dot">•</span> Facebook
+                        </a>
+                        <a href="https://www.snapchat.com/add/aagamkasliwal" target="_blank" class="social-link">
+                            <div class="social-icon">
+                                <img src="/api/placeholder/800/snapchat.png" alt="Snapchat">
+                            </div>
+                            <span class="dot">•</span> Snapchat
+                        </a>
+                    </div>
+                    <!-- <div>
+                        <p class="text-xl text-gray-400 mb-8">
+                            Have a project in mind? Let's create something amazing together.
+                        </p>
+                        <div class="space-y-4">
+                            <a href="mailto:aagam1364@yahoo.com"
+                                class="block text-2xl hover:text-blue-400 transition-colors">aagam1364@yahoo.com</a>
+                            <p class="text-2xl">+91-7744092670</p>
+                        </div>
+                        <div class="flex space-x-6 mt-8">
+                            <a href="https://linkedin.com/in/aagamkasliwal" target="_blank"
+                                class="text-gray-400 hover:text-blue-400 transition-colors">LinkedIn</a><br><br>
+                            <a href="https://bio.site/AagamKasliwal" target="_blank"
+                                class="text-gray-400 hover:text-blue-400 transition-colors">Portfolio</a><br><br>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </center>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.from('.mega-text', {
+                duration: 1.5,
+                y: 100,
+                opacity: 0,
+                ease: 'power4.out'
+            });
+
+            const revealElements = document.querySelectorAll('.reveal-text');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            });
+
+            revealElements.forEach(element => observer.observe(element));
+        });
+    </script>
+</body>
+
+</html>

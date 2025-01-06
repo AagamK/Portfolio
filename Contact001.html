@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio Site</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAGFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVfk6JAAAACHRSTlMABgwQFRglKi7nwKIAAABaSURBVDjLY2AYBaNgFBAgJsLBwMDAyMDMwAjEQMzEwMTAxsDMwA7EDEwMHAzMDJxAzMDEwMXAzMANxAwMQAVMQMzEwMzGzsDMwAHEQD1MDGxAzMgwCkbBKAAAGK4HeR3TsOAAAAAASUVORK5CYII=');
+            color: white;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            width: 100%;
+            height: 60vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .moving-text {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 2.5rem;
+            color: rgba(255, 255, 255, 0.1);
+            text-transform: uppercase;
+            font-weight: bold;
+            overflow: hidden;
+        }
+
+        .text-row {
+            white-space: nowrap;
+            animation: moveText 20s linear infinite;
+        }
+
+        .text-row:nth-child(even) {
+            animation-direction: reverse;
+        }
+
+        @keyframes moveText {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .profile-container {
+            position: absolute;
+            z-index: 1;
+            background-color: #ff6b4a;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .interest-text {
+            text-align: center;
+            margin: 20px 0;
+            padding: 10px;
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: black;
+            font-size: 1rem;
+        }
+
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-icon img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .dot {
+            margin-right: 10px;
+            color: #666;
+        }
+
+        .email-icon {
+            width: 24px;
+            height: 24px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="moving-text">
+            <div class="text-row">AAGAM KASLIWAL AAGAM KASLIWAL AAGAM KASLIWAL&nbsp;</div>
+            <div class="text-row">AAGAM KASLIWAL AAGAM KASLIWAL AAGAM KASLIWAL&nbsp;</div>
+            <div class="text-row">AAGAM KASLIWAL AAGAM KASLIWAL AAGAM KASLIWAL&nbsp;</div>
+            <div class="text-row">AAGAM KASLIWAL AAGAM KASLIWAL AAGAM KASLIWAL&nbsp;</div>
+            <div class="text-row">AAGAM KASLIWAL AAGAM KASLIWAL AAGAM KASLIWAL&nbsp;</div>
+        </div>
+        <div class="profile-container">
+            <img src="/api/placeholder/800/Self.jpg" alt="Profile" class="profile-img">
+        </div>
+    </div>
+
+    <div class="interest-text">👉 I'M INTERESTED IN **APP DEVELOPMENT**</div>
+
+    <img src="" alt="Email" class="email-icon">
+
+    <div class="social-links">
+        <a href="#" class="social-link">
+            <div class="social-icon">
+                <img src="/api/placeholder/800/linkedin.png" alt="LinkedIn">
+            </div>
+            <span class="dot">•</span> LinkedIn
+        </a>
+        <a href="#" class="social-link">
+            <div class="social-icon">
+                <img src="/api/placeholder/800/github.png" alt="GitHub">
+            </div>
+            <span class="dot">•</span> GitHub
+        </a>
+        <a href="#" class="social-link">
+            <div class="social-icon">
+                <img src="/api/placeholder/800/instagram.png" alt="Instagram">
+            </div>
+            <span class="dot">•</span> Instagram
+        </a>
+        <a href="#" class="social-link">
+            <div class="social-icon">
+                <img src="/api/placeholder/800/x.png" alt="X">
+            </div>
+            <span class="dot">•</span> X
+        </a>
+        <a href="#" class="social-link">
+            <div class="social-icon">
+                <img src="/api/placeholder/800/facebook.png" alt="Facebook">
+            </div>
+            <span class="dot">•</span> Facebook
+        </a>
+        <a href="#" class="social-link">
+            <div class="social-icon">
+                <img src="/api/placeholder/800/snapchat.png" alt="Snapchat">
+            </div>
+            <span class="dot">•</span> Snapchat
+        </a>
+    </div>
+</body>
+</html>
